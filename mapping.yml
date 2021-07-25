@@ -13,10 +13,10 @@ tables:
     - {key: null, name: osm_id, type: id}
     - {key: null, name: geometry, type: geometry}
     - {key: name, name: name, type: string}
-    - {key: 'name:fr', name: namefr, type: string}
-    - {key: 'name:de', name: namede, type: string}
-    - {key: 'name:ar', name: namear, type: string}
-    - {key: 'name:en', name: nameen, type: string}
+    - {key: 'name:fr', name: name_fr, type: string}
+    - {key: 'name:de', name: name_de, type: string}
+    - {key: 'name:ar', name: name_ar, type: string}
+    - {key: 'name:en', name: name_en, type: string}
     - {key: null, name: type, type: mapping_value}
     - {key: admin_level, name: admin_level, type: integer}
     - {key: maritime, name: maritime, type: string}
@@ -28,10 +28,10 @@ tables:
     - {key: null, name: osm_id, type: id}
     - {key: null, name: geometry, type: geometry}
     - {key: name, name: name, type: string}
-    - {key: 'name:fr', name: namefr, type: string}
-    - {key: 'name:de', name: namede, type: string}
-    - {key: 'name:ar', name: namear, type: string}
-    - {key: 'name:en', name: nameen, type: string}
+    - {key: 'name:fr', name: name_fr, type: string}
+    - {key: 'name:de', name: name_de, type: string}
+    - {key: 'name:ar', name: name_ar, type: string}
+    - {key: 'name:en', name: name_en, type: string}
     - {key: null, name: type, type: mapping_value}
     mapping:
       building: [__any__]
@@ -41,10 +41,10 @@ tables:
     - {key: null, name: osm_id, type: id}
     - {key: null, name: geometry, type: geometry}
     - {key: name, name: name, type: string}
-    - {key: 'name:fr', name: namefr, type: string}
-    - {key: 'name:de', name: namede, type: string}
-    - {key: 'name:ar', name: namear, type: string}
-    - {key: 'name:en', name: nameen, type: string}
+    - {key: 'name:fr', name: name_fr, type: string}
+    - {key: 'name:de', name: name_de, type: string}
+    - {key: 'name:ar', name: name_ar, type: string}
+    - {key: 'name:en', name: name_en, type: string}
     - {key: null, name: type, type: mapping_value}
     - {key: null, name: area, type: area}
     mapping:
@@ -62,10 +62,10 @@ tables:
     - {key: null, name: geometry, type: geometry}
     - {key: name, name: name, type: string}
     - {key: int_name, name: int_name, type: string}
-    - {key: 'name:fr', name: namefr, type: string}
-    - {key: 'name:de', name: namede, type: string}
-    - {key: 'name:ar', name: namear, type: string}
-    - {key: 'name:en', name: nameen, type: string}
+    - {key: 'name:fr', name: name_fr, type: string}
+    - {key: 'name:de', name: name_de, type: string}
+    - {key: 'name:ar', name: name_ar, type: string}
+    - {key: 'name:en', name: name_en, type: string}
     - {key: null, name: type, type: mapping_value}
     - {key: population, name: population, type: integer}
     - {key: capital, name: capital, type: string}
@@ -81,10 +81,10 @@ tables:
     - {key: null, name: osm_id, type: id}
     - {key: null, name: geometry, type: geometry}
     - {key: name, name: name, type: string}
-    - {key: 'name:fr', name: namefr, type: string}
-    - {key: 'name:de', name: namede, type: string}
-    - {key: 'name:ar', name: namear, type: string}
-    - {key: 'name:en', name: nameen, type: string}
+    - {key: 'name:fr', name: name_fr, type: string}
+    - {key: 'name:de', name: name_de, type: string}
+    - {key: 'name:ar', name: name_ar, type: string}
+    - {key: 'name:en', name: name_en, type: string}
     - {key: null, name: type, type: mapping_value}
     mapping:
       natural: [peak, bay, cape, volcano]
@@ -98,10 +98,10 @@ tables:
     - {key: null, name: geometry, type: geometry}
     - {key: null, name: type, type: mapping_value}
     - {key: name, name: name, type: string}
-    - {key: 'name:fr', name: namefr, type: string}
-    - {key: 'name:de', name: namede, type: string}
-    - {key: 'name:ar', name: namear, type: string}
-    - {key: 'name:en', name: nameen, type: string}
+    - {key: 'name:fr', name: name_fr, type: string}
+    - {key: 'name:de', name: name_de, type: string}
+    - {key: 'name:ar', name: name_ar, type: string}
+    - {key: 'name:en', name: name_en, type: string}
     - {key: tunnel, name: tunnel, type: boolint}
     - {key: bridge, name: bridge, type: boolint}
     - {key: oneway, name: oneway, type: direction}
@@ -123,10 +123,10 @@ tables:
     - {key: null, name: geometry, type: geometry}
     - {key: null, name: type, type: mapping_value}
     - {key: name, name: name, type: string}
-    - {key: 'name:fr', name: namefr, type: string}
-    - {key: 'name:de', name: namede, type: string}
-    - {key: 'name:ar', name: namear, type: string}
-    - {key: 'name:en', name: nameen, type: string}
+    - {key: 'name:fr', name: name_fr, type: string}
+    - {key: 'name:de', name: name_de, type: string}
+    - {key: 'name:ar', name: name_ar, type: string}
+    - {key: 'name:en', name: name_en, type: string}
     - {key: tunnel, name: tunnel, type: boolint}
     - {key: bridge, name: bridge, type: boolint}
     - {key: oneway, name: oneway, type: direction}
@@ -150,10 +150,10 @@ tables:
     - {key: null, name: osm_id, type: id}
     - {key: null, name: geometry, type: geometry}
     - {key: name, name: name, type: string}
-    - {key: 'name:fr', name: namefr, type: string}
-    - {key: 'name:de', name: namede, type: string}
-    - {key: 'name:ar', name: namear, type: string}
-    - {key: 'name:en', name: nameen, type: string}
+    - {key: 'name:fr', name: name_fr, type: string}
+    - {key: 'name:de', name: name_de, type: string}
+    - {key: 'name:ar', name: name_ar, type: string}
+    - {key: 'name:en', name: name_en, type: string}
     - {key: short_name, name: short_name, type: string}
     - {key: station, name: station, type: string}
     - {key: null, name: type, type: mapping_value}
@@ -166,10 +166,10 @@ tables:
     - {key: null, name: osm_id, type: id}
     - {key: null, name: geometry, type: geometry}
     - {key: name, name: name, type: string}
-    - {key: 'name:fr', name: namefr, type: string}
-    - {key: 'name:de', name: namede, type: string}
-    - {key: 'name:ar', name: namear, type: string}
-    - {key: 'name:en', name: nameen, type: string}
+    - {key: 'name:fr', name: name_fr, type: string}
+    - {key: 'name:de', name: name_de, type: string}
+    - {key: 'name:ar', name: name_ar, type: string}
+    - {key: 'name:en', name: name_en, type: string}
     - {key: null, name: type, type: mapping_value}
     - {key: null, name: area, type: area}
     mapping:
@@ -184,10 +184,10 @@ tables:
     - {key: null, name: osm_id, type: id}
     - {key: null, name: geometry, type: geometry}
     - {key: name, name: name, type: string}
-    - {key: 'name:fr', name: namefr, type: string}
-    - {key: 'name:de', name: namede, type: string}
-    - {key: 'name:ar', name: namear, type: string}
-    - {key: 'name:en', name: nameen, type: string}
+    - {key: 'name:fr', name: name_fr, type: string}
+    - {key: 'name:de', name: name_de, type: string}
+    - {key: 'name:ar', name: name_ar, type: string}
+    - {key: 'name:en', name: name_en, type: string}
     - {key: null, name: type, type: mapping_value}
     mapping:
       barrier: [ditch]
@@ -198,10 +198,10 @@ tables:
     - {key: null, name: osm_id, type: id}
     - {key: null, name: geometry, type: geometry}
     - {key: name, name: name, type: string}
-    - {key: 'name:fr', name: namefr, type: string}
-    - {key: 'name:de', name: namede, type: string}
-    - {key: 'name:ar', name: namear, type: string}
-    - {key: 'name:en', name: nameen, type: string}
+    - {key: 'name:fr', name: name_fr, type: string}
+    - {key: 'name:de', name: name_de, type: string}
+    - {key: 'name:ar', name: name_ar, type: string}
+    - {key: 'name:en', name: name_en, type: string}
     - {key: null, name: type, type: mapping_value}
     mapping:
       amenity: [university, school, library, hospital, fire_station, police, townhall,
@@ -215,10 +215,10 @@ tables:
     - {key: null, name: osm_id, type: id}
     - {key: null, name: geometry, type: geometry}
     - {key: name, name: name, type: string}
-    - {key: 'name:fr', name: namefr, type: string}
-    - {key: 'name:de', name: namede, type: string}
-    - {key: 'name:ar', name: namear, type: string}
-    - {key: 'name:en', name: nameen, type: string}
+    - {key: 'name:fr', name: name_fr, type: string}
+    - {key: 'name:de', name: name_de, type: string}
+    - {key: 'name:ar', name: name_ar, type: string}
+    - {key: 'name:en', name: name_en, type: string}
     - {key: null, name: type, type: mapping_value}
     mapping:
       amenity: [university, school, library, hospital, fire_station, police, townhall,

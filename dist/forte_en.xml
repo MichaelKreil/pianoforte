@@ -4735,7 +4735,7 @@
     geometry, 'en' as lang, type, NULL as ldir,
     CASE WHEN capital='yes' THEN 1 WHEN capital IN ('2','3','4') THEN 2 WHEN type='state' THEN 3 ELSE 100 END AS prio,
     CASE WHEN capital='yes' THEN 1 WHEN capital IN ('2','3','4','5','6') THEN capital::INT ELSE 100 END AS capital,
-    COALESCE(NULLIF(nameen, ''), NULLIF(int_name, ''), name) as name
+    COALESCE(NULLIF(name_en, ''), NULLIF(int_name, ''), name) as name
   FROM
     osm_places
   WHERE
@@ -4877,7 +4877,7 @@
     CASE WHEN type IN ('hamlet', 'suburb', 'isolated_dwelling', 'neighbourhood', 'allotments', 'city_block') THEN 'minor' ELSE type END AS type,
     CASE WHEN capital='yes' THEN 1 WHEN capital IN ('2','3','4','5','6') THEN capital::INT ELSE 100 END AS capital,
     population,
-    COALESCE(NULLIF(nameen, ''), NULLIF(int_name, ''), name) as name
+    COALESCE(NULLIF(name_en, ''), NULLIF(int_name, ''), name) as name
   FROM
     osm_places
   ORDER BY
@@ -4955,13 +4955,13 @@
       <Parameter name="user"><![CDATA[tilery]]></Parameter>
       <Parameter name="host"><![CDATA[]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT
-    ST_Centroid(ST_Union(geometry)) AS geometry, 'en' as lang, type, station, COALESCE(NULLIF(short_name, ''), NULLIF("nameen", ''), name) AS name
+    ST_Centroid(ST_Union(geometry)) AS geometry, 'en' as lang, type, station, COALESCE(NULLIF(short_name, ''), NULLIF("name_en", ''), name) AS name
   FROM
     osm_transport_points
   WHERE
     geometry && !bbox!
   GROUP BY
-    type, station, name, short_name, "nameen"
+    type, station, name, short_name, "name_en"
 ) AS data]]></Parameter>
     </Datasource>
   </Layer>
@@ -5117,7 +5117,7 @@
       <Parameter name="user"><![CDATA[tilery]]></Parameter>
       <Parameter name="host"><![CDATA[]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT
-    geometry, 'en' as lang, type, COALESCE(NULLIF(nameen, ''), name) as name
+    geometry, 'en' as lang, type, COALESCE(NULLIF(name_en, ''), name) as name
   FROM
     osm_pois
 ) AS data]]></Parameter>
@@ -5275,7 +5275,7 @@
       <Parameter name="user"><![CDATA[tilery]]></Parameter>
       <Parameter name="host"><![CDATA[]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT
-    geometry, 'en' as lang, type, COALESCE(NULLIF(nameen, ''), name) as name
+    geometry, 'en' as lang, type, COALESCE(NULLIF(name_en, ''), name) as name
   FROM
     osm_aois
 ) AS data]]></Parameter>
@@ -5303,7 +5303,7 @@
       <Parameter name="user"><![CDATA[tilery]]></Parameter>
       <Parameter name="host"><![CDATA[]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT
-    geometry, type, 'en' as lang, COALESCE(NULLIF(nameen, ''), name) as name
+    geometry, type, 'en' as lang, COALESCE(NULLIF(name_en, ''), name) as name
   FROM
     osm_landusages
   WHERE
@@ -5564,7 +5564,7 @@
       <Parameter name="user"><![CDATA[tilery]]></Parameter>
       <Parameter name="host"><![CDATA[]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT
-    geometry, type, 'en' as lang, COALESCE(NULLIF(nameen, ''), name) as name
+    geometry, type, 'en' as lang, COALESCE(NULLIF(name_en, ''), name) as name
   FROM
     osm_landusages_gen
   WHERE
@@ -5652,7 +5652,7 @@
       <Parameter name="user"><![CDATA[tilery]]></Parameter>
       <Parameter name="host"><![CDATA[]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT
-    geometry, admin_level, 'en' as lang, COALESCE(NULLIF(nameen, ''), name) as name
+    geometry, admin_level, 'en' as lang, COALESCE(NULLIF(name_en, ''), name) as name
   FROM
     osm_admin
   WHERE
@@ -5686,7 +5686,7 @@
       <Parameter name="user"><![CDATA[tilery]]></Parameter>
       <Parameter name="host"><![CDATA[]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT
-    geometry, admin_level, 'en' as lang, COALESCE(NULLIF(nameen, ''), name) as name
+    geometry, admin_level, 'en' as lang, COALESCE(NULLIF(name_en, ''), name) as name
   FROM
     osm_admin
   WHERE
@@ -6045,7 +6045,7 @@
       WHEN type IN ('track', 'service', 'living_street', 'unclassified', 'residential') THEN 'minor'
       ELSE type
     END AS type,
-    COALESCE(NULLIF(nameen, ''), name) as name
+    COALESCE(NULLIF(name_en, ''), name) as name
   FROM
     osm_roads
   WHERE
@@ -6119,7 +6119,7 @@ UNION
       <Parameter name="user"><![CDATA[tilery]]></Parameter>
       <Parameter name="host"><![CDATA[]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT
-    geometry, type, COALESCE(NULLIF(nameen, ''), name) as name
+    geometry, type, COALESCE(NULLIF(name_en, ''), name) as name
   FROM
     osm_waterways
   WHERE
@@ -6150,7 +6150,7 @@ UNION
       <Parameter name="user"><![CDATA[tilery]]></Parameter>
       <Parameter name="host"><![CDATA[]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT
-    geometry, type, COALESCE(NULLIF(nameen, ''), name) as name
+    geometry, type, COALESCE(NULLIF(name_en, ''), name) as name
   FROM
     osm_waterways_gen
   WHERE
