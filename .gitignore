@@ -1,3 +1,4 @@
 *.pbf
 *.tar
 /imposm/
+/tmp/

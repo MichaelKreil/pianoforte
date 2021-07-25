@@ -40,6 +40,10 @@ curl -L "https://github.com/omniscale/imposm3/releases/download/v0.11.1/imposm-0
 imposm/imposm import -config ./imposm.conf -read planet-latest.osm.pbf
 imposm/imposm import -config ./imposm.conf -write
 
+
+# https://github.com/tilery/mae-boundaries?????
+
+
 # add city names
 
 wget https://raw.githubusercontent.com/tilery/mae-boundaries/master/city.csv
