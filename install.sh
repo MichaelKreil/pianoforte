@@ -12,9 +12,16 @@ apt -y install gnupg2 gdal-bin apache2 build-essential autoconf apache2-dev libc
 pg_ctlcluster 13 main start
 pg_ctlcluster 13 main status
 
-# prepare table
+
+
+
+# get repo
 sudo su - postgres
 
+git clone https://github.com/MichaelKreil/pianoforte.git
+cd pianoforte
+
+# prepare table
 createuser --no-superuser --no-createrole --createdb tilery
 createdb -E UTF8 -O tilery tilery
 psql tilery -c "CREATE EXTENSION IF NOT EXISTS postgis"
@@ -23,13 +30,15 @@ echo "ALTER USER tilery WITH PASSWORD 'tilery';" | psql -d tilery
 # download planet
 wget https://planet.openstreetmap.org/pbf/planet-latest.osm.pbf
 
-wget https://github.com/omniscale/imposm3/releases/download/v0.11.1/imposm-0.11.1-linux-x86-64.tar.gz
-gunzip imposm-0.11.1-linux-x86-64.tar.gz
-tar -xf imposm-0.11.1-linux-x86-64.tar
-rm imposm-0.11.1-linux-x86-64.tar
-mv imposm-0.11.1-linux-x86-64 imposm
+# install imposm
+#curl -L "https://github.com/omniscale/imposm3/releases/download/v0.11.1/imposm-0.11.1-linux-x86-64.tar.gz" | gzip -d > imposm.tar
+mkdir imposm
+curl -L "https://github.com/omniscale/imposm3/releases/download/v0.11.1/imposm-0.11.1-linux-x86-64.tar.gz" | tar -zxf - -C imposm --strip-components=1
+#rm imposm-0.11.1-linux-x86-64.tar
+#mv imposm-0.11.1-linux-x86-64 imposm
 
-imposm/imposm import -config ./imposm.conf -mapping ./mapping.yml -limitto bbox/germany.geojson -read planet-latest.osm.pbf -cachedir ./cache -overwritecache -write -deployproduction -connection 'postgis: dbname=tilery host=/var/run/postgresql'
+imposm/imposm import -config ./imposm.conf -read planet-latest.osm.pbf
+imposm/imposm import -config ./imposm.conf -write
 
 # add city names
 
