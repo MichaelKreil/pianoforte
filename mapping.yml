@@ -14,6 +14,7 @@ tables:
     - {key: null, name: geometry, type: geometry}
     - {key: name, name: name, type: string}
     - {key: 'name:fr', name: namefr, type: string}
+    - {key: 'name:de', name: namede, type: string}
     - {key: 'name:ar', name: namear, type: string}
     - {key: 'name:en', name: nameen, type: string}
     - {key: null, name: type, type: mapping_value}
@@ -28,6 +29,7 @@ tables:
     - {key: null, name: geometry, type: geometry}
     - {key: name, name: name, type: string}
     - {key: 'name:fr', name: namefr, type: string}
+    - {key: 'name:de', name: namede, type: string}
     - {key: 'name:ar', name: namear, type: string}
     - {key: 'name:en', name: nameen, type: string}
     - {key: null, name: type, type: mapping_value}
@@ -40,6 +42,7 @@ tables:
     - {key: null, name: geometry, type: geometry}
     - {key: name, name: name, type: string}
     - {key: 'name:fr', name: namefr, type: string}
+    - {key: 'name:de', name: namede, type: string}
     - {key: 'name:ar', name: namear, type: string}
     - {key: 'name:en', name: nameen, type: string}
     - {key: null, name: type, type: mapping_value}
@@ -60,6 +63,7 @@ tables:
     - {key: name, name: name, type: string}
     - {key: int_name, name: int_name, type: string}
     - {key: 'name:fr', name: namefr, type: string}
+    - {key: 'name:de', name: namede, type: string}
     - {key: 'name:ar', name: namear, type: string}
     - {key: 'name:en', name: nameen, type: string}
     - {key: null, name: type, type: mapping_value}
@@ -78,6 +82,7 @@ tables:
     - {key: null, name: geometry, type: geometry}
     - {key: name, name: name, type: string}
     - {key: 'name:fr', name: namefr, type: string}
+    - {key: 'name:de', name: namede, type: string}
     - {key: 'name:ar', name: namear, type: string}
     - {key: 'name:en', name: nameen, type: string}
     - {key: null, name: type, type: mapping_value}
@@ -94,6 +99,7 @@ tables:
     - {key: null, name: type, type: mapping_value}
     - {key: name, name: name, type: string}
     - {key: 'name:fr', name: namefr, type: string}
+    - {key: 'name:de', name: namede, type: string}
     - {key: 'name:ar', name: namear, type: string}
     - {key: 'name:en', name: nameen, type: string}
     - {key: tunnel, name: tunnel, type: boolint}
@@ -118,6 +124,7 @@ tables:
     - {key: null, name: type, type: mapping_value}
     - {key: name, name: name, type: string}
     - {key: 'name:fr', name: namefr, type: string}
+    - {key: 'name:de', name: namede, type: string}
     - {key: 'name:ar', name: namear, type: string}
     - {key: 'name:en', name: nameen, type: string}
     - {key: tunnel, name: tunnel, type: boolint}
@@ -144,6 +151,7 @@ tables:
     - {key: null, name: geometry, type: geometry}
     - {key: name, name: name, type: string}
     - {key: 'name:fr', name: namefr, type: string}
+    - {key: 'name:de', name: namede, type: string}
     - {key: 'name:ar', name: namear, type: string}
     - {key: 'name:en', name: nameen, type: string}
     - {key: short_name, name: short_name, type: string}
@@ -159,6 +167,7 @@ tables:
     - {key: null, name: geometry, type: geometry}
     - {key: name, name: name, type: string}
     - {key: 'name:fr', name: namefr, type: string}
+    - {key: 'name:de', name: namede, type: string}
     - {key: 'name:ar', name: namear, type: string}
     - {key: 'name:en', name: nameen, type: string}
     - {key: null, name: type, type: mapping_value}
@@ -176,6 +185,7 @@ tables:
     - {key: null, name: geometry, type: geometry}
     - {key: name, name: name, type: string}
     - {key: 'name:fr', name: namefr, type: string}
+    - {key: 'name:de', name: namede, type: string}
     - {key: 'name:ar', name: namear, type: string}
     - {key: 'name:en', name: nameen, type: string}
     - {key: null, name: type, type: mapping_value}
@@ -189,6 +199,7 @@ tables:
     - {key: null, name: geometry, type: geometry}
     - {key: name, name: name, type: string}
     - {key: 'name:fr', name: namefr, type: string}
+    - {key: 'name:de', name: namede, type: string}
     - {key: 'name:ar', name: namear, type: string}
     - {key: 'name:en', name: nameen, type: string}
     - {key: null, name: type, type: mapping_value}
@@ -205,6 +216,7 @@ tables:
     - {key: null, name: geometry, type: geometry}
     - {key: name, name: name, type: string}
     - {key: 'name:fr', name: namefr, type: string}
+    - {key: 'name:de', name: namede, type: string}
     - {key: 'name:ar', name: namear, type: string}
     - {key: 'name:en', name: nameen, type: string}
     - {key: null, name: type, type: mapping_value}
