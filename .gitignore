@@ -5,7 +5,6 @@ project.xml
 *~
 tmp/
 *.mbtiles
-*.xml
 bin/
 include/
 lib/
