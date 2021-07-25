@@ -1,5 +1,7 @@
 *.mbtiles
 *.pbf
+*.tar
+/imposm/
 *~
 .pydevproject
 .Python
